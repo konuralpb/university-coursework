@@ -1,0 +1,12 @@
+for:
+	beq x1, x4, end
+	lw x6, 0(x1)
+	lw x7, 0(x2)
+	add x7, x7, x7
+	add x7, x7, x7
+	add x9, x3, x7
+	sw x6, 0(x9)
+	addi x1, x1, 4
+	addi x2, x2, 4
+	jal x10, for
+end:
